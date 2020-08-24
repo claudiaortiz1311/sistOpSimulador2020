@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.TextFlow?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="simulador4.ConsolaControlador">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <center>
+            <ScrollPane BorderPane.alignment="CENTER">
+               <content>
+                  <TextFlow fx:id="consola" minHeight="400.0" minWidth="800.0" prefHeight="400.0" prefWidth="800.0">
+                     <padding>
+                        <Insets bottom="12.0" left="8.0" top="12.0" />
+                     </padding>
+                  </TextFlow>
+               </content>
+            </ScrollPane>
+         </center>
+         <top>
+            <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <items>
+                  <JFXButton fx:id="botAnterior" onAction="#botConsolaActionEvent" text="Anterior" />
+                  <JFXButton fx:id="botSiguiente" layoutX="10.0" layoutY="13.0" onAction="#botConsolaActionEvent" text="Siguiente" />
+                  <JFXButton fx:id="botAhora" layoutX="66.0" layoutY="13.0" onAction="#botConsolaActionEvent" text="Tiempo actual" />
+               </items>
+            </ToolBar>
+         </top>
+      </BorderPane>
+   </children>
+</StackPane>

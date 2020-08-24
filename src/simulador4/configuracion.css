@@ -1,0 +1,56 @@
+
+*
+{
+    -fx-primary: white;
+    -fx-secondary: #3f3f3f;
+    texto-blanco: white;
+    texto-negro: black;
+}
+
+.mainFxmlClass {
+
+}
+
+.table-column {
+  -fx-alignment: CENTER;
+  -fx-font-size: 18px;
+}
+
+.tab-header-background
+{
+    -fx-background-color: -fx-secondary;
+}
+
+.consola
+{
+    -fx-background-color: -fx-primary;
+    -fx-font-size: 16px;
+    -fx-text-fill: texto-negro;
+    margin-left:20px;
+    margin-top:20px;
+    margin-right:20px;
+}
+
+.botLateral
+{
+    -fx-background-color: -fx-secondary;
+    -fx-text-fill: texto-blanco;
+}
+
+
+.list-view .list-cell{
+    -fx-background-color: -fx-primary;
+    -fx-font-size: 16px;
+    -fx-padding: 16px;
+}
+
+
+.list-view .list-cell:selected {
+    -fx-background-color: #267e96;
+}
+
+
+
+.list-view .scroll-bar:vertical {
+    -fx-scale-x: 0;
+}

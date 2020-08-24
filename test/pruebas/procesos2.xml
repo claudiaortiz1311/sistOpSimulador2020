@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<info>
+	<proceso>
+		<p id="A" a="0" mem="20" pr="2">
+			<i tipo="CPU">6</i>
+			<i tipo="ES">3</i>
+			<i tipo="CPU">7</i>
+		</p>
+		
+		<p id="B" a="0" mem="16" pr="5">
+			<i tipo="CPU">4</i>
+			<i tipo="ES">6</i>
+			<i tipo="CPU">11</i>
+		</p>
+		
+		<p id="C" a="1" mem="36" pr="1">
+			<i tipo="CPU">8</i>
+		</p>
+		
+		<p id="D" a="2" mem="24" pr="8">
+			<i tipo="CPU">8</i>
+			<i tipo="ES">3</i>
+			<i tipo="CPU">11</i>
+			<i tipo="ES">4</i>
+			<i tipo="CPU">9</i>
+		</p>
+		
+		<p id="E" a="3" mem="20" pr="3">
+			<i tipo="CPU">3</i>
+			<i tipo="ES">5</i>
+			<i tipo="CPU">7</i>
+			<i tipo="ES">4</i>
+			<i tipo="CPU">6</i>
+		</p>
+	</proceso>
+	
+	<memoria tipo="0" so="50" total="224">
+		<pa>16</pa>
+		<pa>50</pa>
+		<pa>20</pa>
+		<pa>18</pa>
+		<pa>70</pa>
+	</memoria>
+</info>

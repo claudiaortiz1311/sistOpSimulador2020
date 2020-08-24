@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<info>
+	<proceso>
+		<p id="A" a="0" mem="20" pr="2">
+			<i tipo="CPU">8</i>
+			<i tipo="ES">6</i>
+			<i tipo="CPU">9</i>
+		</p>
+		
+	</proceso>
+	
+	<memoria tipo="0" so="50" total="224">
+		<pa>16</pa>
+		<pa>50</pa>
+		<pa>20</pa>
+		<pa>18</pa>
+		<pa>70</pa>
+	</memoria>
+</info>

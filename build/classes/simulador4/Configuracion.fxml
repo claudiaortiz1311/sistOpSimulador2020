@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<StackPane fx:id="panel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="606.0" prefWidth="758.0" stylesheets="@configuracion.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="simulador4.ConfigControlador">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: none;" stylesheets="@configuracion.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="TOP_RIGHT">
+                     <children>
+                        <JFXTabPane fx:id="tabPanel" stylesheets="@configuracion.css" tabClosingPolicy="ALL_TABS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <tabs>
+                              <Tab fx:id="tabProcesos" text="Procesos">
+                                 <content>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox style="-fx-background-color: none;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <TableView fx:id="tablaProcesos" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                  <columns>
+                                                    <TableColumn prefWidth="75.0" text="C1" />
+                                                    <TableColumn prefWidth="75.0" text="C2" />
+                                                  </columns>
+                                                </TableView>
+                                                <HBox prefHeight="30.0" prefWidth="608.0" style="-fx-background-color: none;">
+                                                   <children>
+                                                      <JFXButton fx:id="botAgregarProceso" onAction="#botAgregarProcesoActionEvent" style="-fx-background-color: #037bfc;" text="Agregar" textFill="WHITE">
+                                                         <HBox.margin>
+                                                            <Insets right="8.0" />
+                                                         </HBox.margin>
+                                                      </JFXButton>
+                                                      <JFXButton fx:id="botCambiarProceso" onAction="#botCambiarProcesoActionEvent" style="-fx-background-color: #037bfc;" text="Modificar" textFill="WHITE">
+                                                         <HBox.margin>
+                                                            <Insets right="8.0" />
+                                                         </HBox.margin>
+                                                      </JFXButton>
+                                                      <JFXButton fx:id="botBorrarProceso" layoutX="69.0" layoutY="10.0" onAction="#botBorrarProcesoActionEvent" style="-fx-background-color: #037bfc;" text="Borrar" textFill="WHITE">
+                                                         <HBox.margin>
+                                                            <Insets right="8.0" />
+                                                         </HBox.margin>
+                                                      </JFXButton>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets left="8.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab fx:id="tabAnalisis" text="Simulación">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <Label text="Diagrama de procesos">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets left="8.0" top="8.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Canvas fx:id="canvasDiagrama" height="200.0" width="800.0">
+                                                   <VBox.margin>
+                                                      <Insets bottom="16.0" top="16.0" />
+                                                   </VBox.margin>
+                                                </Canvas>
+                                                <Label text="Memoria">
+                                                   <VBox.margin>
+                                                      <Insets bottom="8.0" left="8.0" top="8.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <Canvas fx:id="canvasMemoria" height="120.0" layoutX="-86.0" layoutY="10.0" width="1200.0">
+                                                   <VBox.margin>
+                                                      <Insets bottom="16.0" top="16.0" />
+                                                   </VBox.margin>
+                                                </Canvas>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="20.0" prefWidth="600.0">
+                                                   <VBox.margin>
+                                                      <Insets bottom="8.0" left="8.0" top="8.0" />
+                                                   </VBox.margin>
+                                                   <children>
+                                                      <Label text="Salida">
+                                                         <font>
+                                                            <Font size="20.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <JFXButton fx:id="botConsolaAnterior" onAction="#botConsolaActionEvent" text="&lt;" />
+                                                      <JFXButton fx:id="botConsolaSiguiente" layoutX="63.0" layoutY="10.0" onAction="#botConsolaActionEvent" text="&gt;" />
+                                                      <JFXButton fx:id="botConsolaAhora" layoutX="115.0" layoutY="10.0" onAction="#botConsolaActionEvent" text="ahora" />
+                                                   </children>
+                                                </HBox>
+                                                <ScrollPane style="-fx-background-color: transparent;" stylesheets="@configuracion.css" VBox.vgrow="ALWAYS">
+                                                   <VBox.margin>
+                                                      <Insets left="8.0" />
+                                                   </VBox.margin>
+                                                   <content>
+                                                      <TextFlow fx:id="consola" prefHeight="149.0" prefWidth="608.0" />
+                                                   </content>
+                                                </ScrollPane>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                           </tabs>
+                        </JFXTabPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+               <right>
+                  <VBox alignment="CENTER" maxWidth="150.0" prefWidth="150.0" style="-fx-background-color: -fx-secondary;" stylesheets="@configuracion.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <JFXButton fx:id="botConfigMemoria" maxWidth="150.0" onAction="#botConfigMemoriaAccion" prefHeight="100.0" prefWidth="150.0" styleClass="botLateral" stylesheets="@configuracion.css" text="Configurar memoria" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="botIniciar" layoutX="10.0" layoutY="10.0" maxWidth="150.0" onAction="#botIniciarAccion" prefHeight="100.0" prefWidth="150.0" styleClass="botLateral" stylesheets="@configuracion.css" text="Iniciar" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="botDetener" layoutX="10.0" layoutY="351.0" maxWidth="150.0" onAction="#botDetenerActionEvent" prefHeight="100.0" prefWidth="150.0" styleClass="botLateral" stylesheets="@configuracion.css" text="Detener" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="botTerminar" layoutX="10.0" layoutY="351.0" maxWidth="150.0" onAction="#botTerminarActionEvent" prefHeight="100.0" prefWidth="150.0" styleClass="botLateral" stylesheets="@configuracion.css" text="Final" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+               </right>
+               <top>
+                  <MenuBar BorderPane.alignment="CENTER">
+                    <menus>
+                      <Menu mnemonicParsing="false" text="Carga de trabajos">
+                        <items>
+                          <MenuItem fx:id="menuAbrir" mnemonicParsing="false" onAction="#menuAbrirAccion" text="Importar desde archivo" />
+                              <MenuItem fx:id="menuComparar" mnemonicParsing="false" onAction="#menuVerAccion" text="Comparar tiempos de algoritmos" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Ver">
+                           <items>
+                              <MenuItem fx:id="menuVerProcesos" mnemonicParsing="false" onAction="#menuVerAccion" text="Procesos" />
+                              <MenuItem fx:id="menuVerAnalisis" mnemonicParsing="false" onAction="#menuVerAccion" text="Simulación" />
+                              <MenuItem fx:id="menuVerConsola" mnemonicParsing="false" onAction="#menuVerAccion" text="Salida" />
+                           </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+               </top>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
